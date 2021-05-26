@@ -1,5 +1,5 @@
 ##########
-# AKB2Teams - jason@cyberint.com
+# AKB2Teams
 #   Grab vulnerability details from api.AttackerKB.com and post a
 #   summary to a Microsoft Teams Channel via a preconfigured webhook
 #
