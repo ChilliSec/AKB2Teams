@@ -6,6 +6,8 @@ This script is provided in good faith and I don't believe it falls foul of Rapid
 
 Feel free to modify and enhance, it's been working fine for us in it's current form but your mileage may vary 😉
 
+![Screenshot](https://github.com/ChilliSec/AKB2Teams/blob/main/AKB2Teams.png?raw=true)
+
 ## Prerequisites
 * An AttackerKB.com account and API, register on this awesome resource provided by Rapid7 and contribute if you can!
 * MS Teams with sufficient rights to create a channel and connector
