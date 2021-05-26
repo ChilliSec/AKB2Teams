@@ -43,4 +43,4 @@ Assessments are interesting comments that others have posted  on topical vulnera
 * I've added a watchdog that basically counts the API results and if zero will post a message anyway, just so we know it's working;
 * If you're tweaking testing, it might be a good idea to:
   * Create a new MS Teams channel and temporarily replace the Webhook so the 'good' channel doesn't get spammed (and you can delete the test channel afterwards)
-  * Or, comment out the msg.send() lines (there are two near the bottom of the script) and then un-comment the msg.printme() lines to have the compiled 'message cards' dumped to the console
+  * Or, comment out the `msg.send()` lines (there are two near the bottom of the script) and then un-comment the `msg.printme()` lines to have the compiled 'message cards' dumped to the console
