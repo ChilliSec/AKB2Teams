@@ -13,9 +13,10 @@
 #   v3 - 20201023 - Updated the API URL (AKB changed it!!)
 #   v4 - 20210606 - urllib3+requests SSL verification is now silenced
 #   v5 - 20210623 - Argparse support
+#   v6 - 20210629 - Typo fix
 ##########
 script_name = "AKB2Teams"
-script_ver = "v5 - 20210623"
+script_ver = "v6 - 20210629"
 ##########
 # Imports
 from datetime import date,timedelta
@@ -32,7 +33,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Grab vulnerability details from api.AttackerKB.com and post a summary to a Microsoft Teams Channel via a preconfigured webhook')
 parser.add_argument('--api', help='API Key for AKB', required=True)
-parser.add_argument('--webhook', help='Full Teams webhook address, including https://', required=True)
+parser.add_argument('--webhook', help='Full Teams webhook address', required=True)
 args = vars(parser.parse_args())
 
 apikey = args['api']
@@ -94,7 +95,7 @@ for assessment in assessmentjson["data"]:
             if reference.startswith("CVE-"):
                 # Add links to 3rd-party sites
                 msg.addLinkButton("CVE Details","https://www.cvedetails.com/cve/{}".format(reference))
-                msg.addLinkButton("National Vulnerability Database","https://nvd.nist.gov/vuln/detail/{}".format(referen))
+                msg.addLinkButton("National Vulnerability Database","https://nvd.nist.gov/vuln/detail/{}".format(reference))
             elif reference.startswith("https://portal.msrc.microsoft.com/"):
                 # Add link to Microsoft Security Response Center
                 msg.addLinkButton("MSRC Advisory",reference)
